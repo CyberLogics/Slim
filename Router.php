@@ -128,6 +128,16 @@ class Router
     }
 
     /**
+     *  Adds a Route as Whole Object directly.
+     * @param Route $route
+     * @return $this
+     */
+    public function addRoute(\Logilim\Route $route) {
+        $this->routes[] = $route;
+        return $this;
+    }
+
+    /**
      * Get URL for named route
      * @param  string               $name   The name of the route
      * @param  array                Associative array of URL parameter names and replacement values
